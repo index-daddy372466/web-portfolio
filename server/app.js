@@ -26,7 +26,6 @@ app.use((req,res,next)=>{
 
 // nonce
 app.route('/').get((req,res)=>{
-    console.log(res.locals.nonce)
     res.render(path.resolve(__dirname,'../client/dist/index.ejs'),{ nonce: res.locals.nonce })
 })
 
