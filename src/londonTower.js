@@ -1,3 +1,5 @@
 import './muban/styles/template.css'
 
-console.log('london tower')
+  __webpack_nonce__ = '<?=nonce?>';
+  alert('alert from bundle')
+

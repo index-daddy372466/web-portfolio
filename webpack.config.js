@@ -2,16 +2,8 @@
 const path = require("path");
 const HtmlPlug = require("html-webpack-plugin");
 const CssPlug = require("mini-css-extract-plugin");
-const crypto = require("crypto");
-const base = crypto.randomBytes(16).toString("base64");
-const ascii = [...new Array(127)].map((_, k) => String.fromCharCode(k + 160));
-const generateRandomAscii = require("./lib/generation.js");
-// nonce
-let nonce = crypto
-  .createHash("md5", generateRandomAscii(ascii).join``)
-  .update(generateRandomAscii(ascii).join`` + base)
-  .digest("base64");
-  
+
+
 module.exports = {
   // mode
   mode: "development",
@@ -38,9 +30,8 @@ module.exports = {
   // plugins
   plugins: [
     new HtmlPlug({
-      filename: "index.html",
-      template: "src/muban/tenpureto.html",
-      nonce: nonce,
+      filename: "index.ejs",
+      template: "src/muban/tenpureto.ejs",
       inject: false,
     }),
     new CssPlug({
@@ -53,6 +44,8 @@ module.exports = {
       filename: "[name].css",
     }),
   ],
+  // devserver not needed
+  
   // exit/output
   output: {
     path: path.resolve(__dirname, "client/dist"),
