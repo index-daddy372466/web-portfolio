@@ -1,7 +1,9 @@
-*{
+  *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -9,31 +11,120 @@ body{
     display:flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     height:100vh;
     width:100%;
 }
 
 #nav{
-    width:100%;
-    height:50px;
-    border:4px solid indigo;
+    height:100vh;
+    width:300px;
+    z-index:998;
+    background:indigo;
+    border-top-left-radius: 20px;
+    border:4px solid purple;
     position:fixed;
     top:0;
-    left:0;
-    transition:75s;
+    transition:.75s;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+.nav-list-item{
+    width:100%;
+    text-align: center;
+    background-color: #003237;
+    padding: .75rem 0;
+}
+.nav-list-item > a{
+    text-decoration: none;
+    color:#fff;
+    font-size:22px;
+    
+}
+.hidden-nav{
+right:-100%;
+}
+.show-nav{
+    right:0;
+}
+.nav-list-container{
+    border:2px solid #fff;
+    width:100%;
+    height:inherit;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap:1rem;
+}
+.flex-nav-item{
+    width:90%;
+    height:200px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:.25rem;
+}
+.general-nav{
+    border:4px solid #0f0;
+}
+.social-nav{
+    border:4px solid rgb(220, 11, 206);
+}
+footer{
+    height:85px;
 }
 section{
-    position:absolute;
-    bottom:0;
-    left:0;
-    height:85px;
     border:4px solid red;
 }
 footer{
+    position:absolute;
+    bottom:0;
+    left:0;
     bordeR:4px solid blue;
 }
 footer,section{
     width: 100%;
     padding:0 .5rem
 }   
+
+#banner{
+    height:25vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    transition:2.5s;
+    justify-content: center;
+}
+.hidden-banner{    
+    opacity:0;
+}
+
+/* modal */
+.modal-wrapper{
+    position:absolute;
+    height:150px;
+    width:65%;
+    border:3px solid cyan;
+    border-radius: 12px;
+    background:pink;
+    opacity:.6;
+}
+.hidden-modal{
+    display:none;
+}
+
+#nav-button{
+    position:absolute;
+    z-index: 999;
+    top:15px;
+    right:10px;
+    height:50px;
+    width:50px;
+    background:transparent;
+    border:3px solid #f00;
+    border-radius:50%;
+}

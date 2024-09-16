@@ -34,6 +34,16 @@ module.exports = {
       template: "src/muban/tenpureto.ejs",
       inject: false,
     }),
+    new HtmlPlug({
+      filename: "partials/modals/beiseu.ejs",
+      template: "src/muban/modaru.ejs",
+      inject: false,
+    }),
+    new HtmlPlug({
+      filename: "partials/common/navboton.ejs",
+      template: "src/muban/navboton.ejs",
+      inject: false,
+    }),
     new CssPlug({
       insert: function (linkTag) {
         var reference = document.querySelector("#css-target");

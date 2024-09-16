@@ -8,19 +8,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="css-target">Kyle Anthony</title>
-    <link rel="stylesheet" nonce="<?=nonce?>" href="./main.css">
+    <link rel="stylesheet" nonce="<?=nonce?>" href="./main.css" />
   </head>
   <body>
+    <?- include('./partials/modals/beiseu.ejs') ?>
+    <!-- modals -->
+    <?- include('./partials/common/navboton.ejs') ?>
     <!-- navigation -->
-    <nav id="nav" class="navigation nav-elem elem-nav">
+    <nav id="nav" class="navigation nav-elem elem-nav hidden-nav">
       <ul class="nav-list-container">
-        <li class="nav-list-item">home</li>
-        <li class="nav-list-item">work</li>
-        <li class="nav-list-item">contact</li>
+        <div class="general-nav flex-nav-item">
+          <li class="nav-list-item"><a href="#">about</a></li>
+          <li class="nav-list-item"><a href="#">work</a></li>
+          <li class="nav-list-item"><a href="#">contact</a></li>
+        </div>
+        <div class="social-nav flex-nav-item">
+          <li class="nav-list-item"><a href="#">github</a></li>
+          <li class="nav-list-item"><a href="#">LinkedIn</a></li>
+          <li class="nav-list-item"><a href="#">Instagram</a></li>
+        </div>
       </ul>
     </nav>
     <!-- banner/about -->
-    <section id="banner" class="welcome-banner banner-welcome">
+    <section id="banner" class="hidden-banner welcome-banner banner-welcome">
       <h1>Develop with Kyle</h1>
       <h3>subheaer</h3>
     </section>
@@ -40,9 +50,7 @@
         </figure>
       </ul>
     </section>
-    <footer id="contact">
-      footer
-    </footer>
+    <footer id="contact">footer</footer>
     <script nonce="<?=nonce?>" defer src="./main.bundle.js"></script>
   </body>
 </html>

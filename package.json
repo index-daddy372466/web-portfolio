@@ -5,13 +5,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "serve": "nodemon app.js"
+    "serve": "nodemon app.js",
+    "watch": "webpack --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "cookie-parser": "^1.4.6",
     "css-loader": "^7.1.2",
     "ejs": "^3.1.10",
     "express": "^4.21.0",
