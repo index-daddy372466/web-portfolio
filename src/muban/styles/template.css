@@ -99,6 +99,9 @@ footer,section{
     transition:2.5s;
     justify-content: center;
 }
+#work{
+    height:100vh;
+}
 .hidden-banner{    
     opacity:0;
 }

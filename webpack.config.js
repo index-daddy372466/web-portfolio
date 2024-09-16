@@ -1,4 +1,5 @@
 // webpack configuration
+require('dotenv').config()
 const path = require("path");
 const HtmlPlug = require("html-webpack-plugin");
 const CssPlug = require("mini-css-extract-plugin");
@@ -6,7 +7,7 @@ const CssPlug = require("mini-css-extract-plugin");
 
 module.exports = {
   // mode
-  mode: "development",
+  mode: (!process.env._TYPE_ || process.env._TYPE_!='production') ? 'development' : process.env._TYPE_,
   // entry
   entry: [
     path.resolve(__dirname, "src/londonTower.js"),
