@@ -41,7 +41,7 @@ body{
     text-decoration: none;
     color:#fff;
     font-size:22px;
-    
+
 }
 .hidden-nav{
 right:-100%;
@@ -81,7 +81,7 @@ section{
     border:4px solid red;
 }
 footer{
-    position:absolute;
+    position:fixed;
     bottom:0;
     left:0;
     bordeR:4px solid blue;
@@ -89,10 +89,10 @@ footer{
 footer,section{
     width: 100%;
     padding:0 .5rem
-}   
+}
 
 #banner{
-    height:25vh;
+    height:250px;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -100,9 +100,9 @@ footer,section{
     justify-content: center;
 }
 #work{
-    height:100vh;
+    height:100%;
 }
-.hidden-banner{    
+.hidden-banner{
     opacity:0;
 }
 
