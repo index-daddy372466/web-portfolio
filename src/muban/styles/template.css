@@ -110,9 +110,11 @@ footer,section{
 }
 .yes-scroll{
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 .no-scroll{
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 #work{
     height:100%;
