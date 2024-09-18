@@ -9,10 +9,10 @@ import { showModal, hideModal } from "./lib/triggers/events/modals.js"; // test 
 import { disableScroll, enableScroll } from "./lib/triggers/events/scroll.js";
 
 // functions
-showModal(deactivate);
-setTimeout(() => {
-  hideModal(activate);
-}, 4000);
+// showModal(deactivate);
+// setTimeout(() => {
+//   hideModal(activate);
+// }, 4000);
 loadFooter();
 toggleNav(enableScroll,disableScroll);
 enableScroll()
