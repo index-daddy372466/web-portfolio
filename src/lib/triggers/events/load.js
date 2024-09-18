@@ -2,6 +2,10 @@ module.exports = window.onload = (e) => {
   // banner
   const banner = document.getElementById("banner");
   const modal = document.querySelector('.modal-wrapper')
+  const nav = document.getElementById("nav");
+
+  navPos = banner.clientHeight+5
+  nav.style.top = navPos + 'px'
   // banner appears on load
   if(banner.classList.contains('hidden-banner')){
     banner.classList.remove('hidden-banner')

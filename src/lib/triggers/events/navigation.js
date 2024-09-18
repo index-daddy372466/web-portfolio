@@ -2,8 +2,6 @@ const nav = document.getElementById("nav");
 const navbtn = document.getElementById("nav-button");
 const banner = document.getElementById('banner')
 let navPos;
-navPos = banner.clientHeight+5
-nav.style.top = navPos + 'px'
 
 module.exports = toggleNav = (enableScroll,disableScroll,activateDef,deactivateDef) => {
  // window click event
