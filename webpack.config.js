@@ -23,6 +23,14 @@ module.exports = {
         use: [CssPlug.loader, "css-loader"],
       },
       {
+        test: /\.(webp|jp(e)?g)$/,
+        exclude:/node_modules/,
+        loader: 'file-loader',
+        options:{
+          name:"/media/[name].[ext]"
+        }
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
       },
