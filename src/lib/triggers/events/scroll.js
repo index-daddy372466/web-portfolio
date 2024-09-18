@@ -8,12 +8,15 @@ const listenScroll = (e) => {
   if (e.target.scrollTop >= limit) {
     banner.classList.remove("banner-reg");
     banner.classList.add("banner-sm");
+    navPos = banner.clientHeight + 5;
+    nav.style.top = navPos + "px";
   } else {
     banner.classList.add("banner-reg");
     banner.classList.remove("banner-sm");
+    navPos = banner.clientHeight + 5;
+    nav.style.top = navPos + "px";
   }
-  navPos = banner.clientHeight + 5;
-  nav.style.top = navPos + "px";
+
 };
 workCon.addEventListener("scroll", listenScroll);
 

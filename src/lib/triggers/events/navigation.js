@@ -5,7 +5,7 @@ let navPos;
 navPos = banner.clientHeight+5
 nav.style.top = navPos + 'px'
 
-module.exports = toggleNav = (enableScroll,disableScroll) => {
+module.exports = toggleNav = (enableScroll,disableScroll,activateDef,deactivateDef) => {
  // window click event
   window.onclick = e => {
     const pos = {x:e.pageX,y:e.pageY}
@@ -13,11 +13,19 @@ module.exports = toggleNav = (enableScroll,disableScroll) => {
     if (boundaries && !e.target.classList.contains('nav-button-mobile')) {
         nav.classList.remove("show-nav");
         enableScroll()
+        activateDef()
       }
   }
 // nav click event
   navbtn.onclick = (e) => {
     if (nav.classList.contains("hidden-nav")) nav.classList.toggle("show-nav");
-    !/show-nav/.test(nav.classList['value']) ? enableScroll() : disableScroll()
+    if(!/show-nav/.test(nav.classList['value'])) {
+        enableScroll()
+        activateDef()
+    }
+    else{
+      disableScroll()
+      deactivateDef()
+    }
   };
 };

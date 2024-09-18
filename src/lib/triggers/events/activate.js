@@ -15,3 +15,11 @@ function regBg() {
   document.body.classList.add("reg-bg");
   document.body.classList.remove("modal-bg");
 }
+
+const activateDef = () => {
+  let bgElements = [work, footer];
+  bgElements.map((o) => o.classList.remove("blur-element-sm"));
+  return [...bgElements].map((y) => y.classList.remove("no-pointer"));
+};
+
+module.exports = { activate, activateDef };
