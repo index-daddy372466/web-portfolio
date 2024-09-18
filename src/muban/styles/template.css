@@ -157,7 +157,7 @@ footer,section{
     pointer-events: none;
 }
 #nav-button{
-    position:absolute;
+    position:fixed;
     z-index: 999;
     top:15px;
     right:10px;
