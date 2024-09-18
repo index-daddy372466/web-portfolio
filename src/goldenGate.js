@@ -15,4 +15,3 @@ import { disableScroll, enableScroll } from "./lib/triggers/events/scroll.js";
 // }, 4000);
 loadFooter();
 toggleNav(enableScroll,disableScroll);
-enableScroll()

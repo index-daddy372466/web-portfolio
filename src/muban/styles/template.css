@@ -102,12 +102,19 @@ footer,section{
 }
 
 #banner{
-    height:350px;
     display:flex;
     flex-direction: column;
     align-items: center;
     transition:.75s;
     justify-content: center;
+}
+.banner-reg{
+    height:350px;
+    transition:.5s;
+}
+.banner-sm{
+    height:200px;
+    transition:.25s;
 }
 .yes-scroll{
     overflow-y: scroll;

@@ -1,5 +1,5 @@
 const modal = document.querySelector('.modal-wrapper')
-
+// modal appears
  const showModal = (deactivate) => {
     setTimeout(()=>{
         if(modal.classList.contains('hidden-modal')){
@@ -8,7 +8,7 @@ const modal = document.querySelector('.modal-wrapper')
         }
     },2000)
 }
-
+// modal is hidden
 const hideModal = (activate) => {
         if(!modal.classList.contains('hidden-modal')){
             modal.classList.add('hidden-modal')
