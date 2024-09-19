@@ -158,11 +158,41 @@ footer,section{
 }
 .end-point-tag{
     position:absolute;
+    transition:.25s;
+    opacity:0;
 }
 .end-point-img{
     height:200px;
-    width:200px;
+    width:200px;    
 }
+.right-to-left{
+    opacity:1;
+    right: 0;
+    animation: rtl .25s forwards;
+}
+@keyframes rtl {
+    from{
+        right:0;
+    }
+    to{
+        right:auto;
+    }
+}
+
+.left-to-right{
+    opacity:1;
+    animation: ltr .25s forwards;
+}
+
+@keyframes ltr {
+    from{
+        left:0;
+    }
+    to{
+        left:auto;
+    }
+}
+
 .end-point-container{
     width:100%;
     height:100%;
@@ -171,6 +201,7 @@ footer,section{
     justify-content: center;     
     position:relative;   
 }
+
 .fc1{
     top:10px;
 }
