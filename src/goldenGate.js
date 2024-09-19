@@ -2,6 +2,7 @@
 // imports
 import "./lib/triggers/events/load.js"; // window events
 import loadFooter from "./lib/element/footer.js"; // footer
+import endpoint from './lib/element/endpoint.js'
 import { activate, activateDef } from "./lib/triggers/events/activate.js";
 import { deactivate, deactivateDef } from "./lib/triggers/events/deactivate.js"; // deactivate all elements except modal
 import toggleNav from "./lib/triggers/events/navigation.js"; // navigation click (mobile)
@@ -15,3 +16,4 @@ import { disableScroll, enableScroll } from "./lib/triggers/events/scroll.js";
 // }, 4000);
 loadFooter();
 toggleNav(enableScroll, disableScroll, activateDef, deactivateDef);
+endpoint();

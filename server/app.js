@@ -8,6 +8,7 @@ const ascii = [...new Array(127)].map((_, k) => String.fromCharCode(k + 160));
 const generateRandomAscii = require("./lib/generation.js");
 const ejs = require("ejs");
 const cookieParser = require("cookie-parser");
+const readMedia = require('./lib/fetchMedia.js')
 let pages = [];
 ejs.delimiter = "?"; // Means instead use __webpack_nonce__ = '<?=nonce?>'
 
@@ -34,6 +35,16 @@ app.route("/").get((req, res) => {
     nonce: res.locals.nonce,
   });
 });
+
+app.route("/api/media").get((req,res)=>{
+  try{
+    let media = [...readMedia()]
+    res.json({media:media})
+  }
+  catch(err){
+    throw new Error(err)
+  }
+})
 
 app.listen(port, () => {
   console.log("connection on " + port);

@@ -156,13 +156,51 @@ footer,section{
 .no-pointer{
     pointer-events: none;
 }
+.end-point-tag{
+    position:absolute;
+}
+.end-point-img{
+    height:200px;
+    width:200px;
+}
 .end-point-container{
     width:100%;
     height:100%;
     display:Flex;
     align-items: center;
-    justify-content: center;        
+    justify-content: center;     
+    position:relative;   
 }
+.fc1{
+    top:10px;
+}
+.fc2{
+    bottom:10px;
+}
+.prev{
+    transform:rotate(-90deg)
+}
+.forward{
+    transform:rotate(90deg);
+}
+.fingers-container{
+    position:absolute;
+    border:2px solid red;
+    width:100%;
+    padding:0 1rem;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index:999;
+}
+.fa-regular{
+    font-size:30px;
+}
+.fa-regular:active{
+color:silver;
+transition:.25s;
+}
+
 .t1,.t2{
     width:100%;
     height:250px;
