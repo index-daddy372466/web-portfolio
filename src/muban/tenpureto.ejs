@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src-elem 'nonce-<?= nonce ?>';"
-    />
-    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy"
+    content="script-src-elem 'nonce-<?= nonce ?>';default-src data: 'self' https://*.bootstrap.com https://*.jsdelivr.net https://*.fontawesome.com https://fonts.googleapis.com https://fonts.gstatic.com https://code.jquery.com; form-action 'self'; style-src 'self' 'unsafe-inline'; upgrade-insecure-requests" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="css-target">Kyle Anthony</title>
     <link rel="stylesheet" nonce="<?=nonce?>" href="./main.css" />
+    <script nonce="<?=nonce?>" src="https://kit.fontawesome.com/4026a653d4.js" crossorigin="anonymous"></script>
   </head>
   <body class="reg-bg">
     <?- include('./partials/modals/beiseu.ejs') ?>
@@ -102,7 +100,18 @@
             </figure>
           </div>
           </ul>
-         <div class="work-section"><h3>End-point integration</h3></div>
+         <div class="work-section">
+          <h3>End-point integration</h3>
+          <div class="end-point-container">
+            <i class="fa-regular fa-hand-point-up"></i>
+            <i class="fa-regular fa-hand-point-up"></i>
+            <div class="triangle t1"></div>
+            <div class="triangle t2"></div>
+            <i class="fa-regular fa-hand-point-up"></i>
+            <i class="fa-regular fa-hand-point-up"></i>
+          </div>
+          
+        </div>
          <div class="work-section"><h3>Database Distribution & Administration</h3></div>
          <div class="work-section"><h3>Lock down Applications</h3></div>
       </ul>
