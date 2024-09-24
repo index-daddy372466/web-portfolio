@@ -10,7 +10,7 @@ dbdshr.style.top = midscreen + "px";
 const handleSlideEffect = (figs,sections) => {
    // handle all sections
    sections.forEach((sec,index)=>{
-    if(sec.getBoundingClientRect().y <= (dbdshr.getBoundingClientRect().y + 50)){
+    if(sec.getBoundingClientRect().y <= (dbdshr.getBoundingClientRect().y + 10)){
       sec.classList.remove('hide-dbds')
     } else {
       sec.classList.add('hide-dbds')
@@ -23,7 +23,7 @@ const handleSlideEffect = (figs,sections) => {
     } else { 
       fig.classList.add('row')
     }
-    if(fig.getBoundingClientRect().y <= (dbdshr.getBoundingClientRect().y + 50)){
+    if(fig.getBoundingClientRect().y <= (dbdshr.getBoundingClientRect().y)){
       fig.classList.remove('hide-dbds')
       fig.children[0].children[0].classList.remove('hide-dbds')
       fig.children[1].children[0].classList.remove('img-trans')
