@@ -3,7 +3,7 @@ const navbtn = document.getElementById("nav-button");
 const banner = document.getElementById('banner')
 let navPos;
 
-module.exports = toggleNav = (enableScroll,disableScroll,activateDef,deactivateDef) => {
+module.exports = loadtoggleNav = (enableScroll,disableScroll,activateDef,deactivateDef) => {
  // window click event
   window.onclick = e => {
     const pos = {x:e.pageX,y:e.pageY}

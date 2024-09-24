@@ -15,7 +15,7 @@ const stunPointer = () => {
     });
   }, 500);
 };
-module.exports = endpoint = async () => {
+module.exports = loadendpoint = async () => {
   // fetch media endpoint
   let files = await fetch("/api/media")
     .then((r) => r.json())
@@ -34,12 +34,16 @@ module.exports = endpoint = async () => {
         el.onclick = (e) => {
           endpointImg.parentElement.classList.remove("left-to-right");
           endpointImg.parentElement.classList.remove("right-to-left");
+          endpointImg.parentElement.classList.add('temp-opacity')
+
           setTimeout(() => {
             idx += 1;
             idx %= files.length;
             src = files[idx];
-            endpointImg.src = `./media/${src}`;
             endpointImg.parentElement.classList.add("left-to-right");
+            endpointImg.parentElement.classList.remove('temp-opacity')
+
+            endpointImg.src = `./media/${src}`;
             article.href = files[idx];
             console.log(idx);
             stunPointer();
@@ -51,12 +55,14 @@ module.exports = endpoint = async () => {
         el.onclick = (e) => {
           endpointImg.parentElement.classList.remove("left-to-right");
           endpointImg.parentElement.classList.remove("right-to-left");
+          endpointImg.parentElement.classList.add('temp-opacity')
           setTimeout(() => {
             idx -= 1;
             if (idx < 0) idx = files.length - 1;
             src = files[idx];
             endpointImg.src = `./media/${src}`;
             endpointImg.parentElement.classList.add("right-to-left");
+            endpointImg.parentElement.classList.add('temp-opacity')
             article.href = files[idx];
             console.log(idx);
             stunPointer();
