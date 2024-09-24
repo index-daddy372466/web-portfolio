@@ -3,11 +3,12 @@ const banner = document.getElementById("banner");
 const nav = document.getElementById("nav");
 const limit = 150;
 const dbdshr = document.querySelector(".dbds-hr");
+const worksec = document.querySelectorAll('.work-section')
 const midscreen = window.innerHeight / 2;
 let dbdsfigs = document.querySelectorAll('.dbds-figure')
 let endPointCon = document.querySelector('.end-point-container')
 dbdshr.style.top = midscreen + "px";
-const handleFigures = (figs) => {
+const handleSlideEffect = (figs,sections) => {
   // handle figures in dbds
   figs.forEach((fig,idx)=>{
     if(idx % 2 == 0){
@@ -23,22 +24,29 @@ const handleFigures = (figs) => {
       fig.classList.add('hide-dbds')
       fig.children[1].children[0].classList.add('img-trans')
       fig.children[1].children[0].classList.remove('img-trans-def')
-
     }
   })
 
   // handle endpoint container
-  if(endPointCon.getBoundingClientRect().y <= dbdshr.getBoundingClientRect().y){
-    console.log('pos res')
-    endPointCon.classList.remove('hide-dbds')
-  } else {
-    endPointCon.classList.add('hide-dbds')
-  }
+  // if(endPointCon.getBoundingClientRect().y <= dbdshr.getBoundingClientRect().y){
+  //   console.log('pos res')
+  //   endPointCon.classList.remove('hide-dbds')
+  // } else {
+  //   endPointCon.classList.add('hide-dbds')
+  // }
+  sections.forEach((sec,index)=>{
+    if(sec.getBoundingClientRect().y <= (dbdshr.getBoundingClientRect().y + 50)){
+      sec.classList.remove('hide-dbds')
+    } else {
+      sec.classList.add('hide-dbds')
+    }
+  })
 }
 // elongate work-container section on scroll
 const listenScroll = (e) => {
   let figs = [...dbdsfigs]
-  handleFigures(figs)
+  let sections = [...worksec]
+  handleSlideEffect(figs,sections)
   if (e.target.scrollTop >= limit) {
     banner.classList.remove("banner-reg");
     banner.classList.add("banner-sm");

@@ -328,6 +328,7 @@ section {
 /* work section */
 .work-section{
     margin-bottom:5.25rem;
+    transition:.5s;
 }
 figure > a > img {
   height: 175px;
