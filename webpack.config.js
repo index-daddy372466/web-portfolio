@@ -20,7 +20,7 @@ module.exports = {
       {
         test: /\.(css)$/,
         exclude: /node_modules/,
-        use: [CssPlug.loader, "css-loader"],
+        use: [CssPlug.loader, "css-loader","postcss-loader"],
       },
       {
         test: /\.(webp|jp(e)?g)$/,
