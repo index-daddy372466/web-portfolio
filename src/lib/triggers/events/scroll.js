@@ -2,9 +2,43 @@ const workCon = document.getElementById("work");
 const banner = document.getElementById("banner");
 const nav = document.getElementById("nav");
 const limit = 150;
+const dbdshr = document.querySelector(".dbds-hr");
+const midscreen = window.innerHeight / 2;
+let dbdsfigs = document.querySelectorAll('.dbds-figure')
+let endPointCon = document.querySelector('.end-point-container')
+dbdshr.style.top = midscreen + "px";
+const handleFigures = (figs) => {
+  // handle figures in dbds
+  figs.forEach((fig,idx)=>{
+    if(idx % 2 == 0){
+      fig.classList.add('row-rev')
+    } else { 
+      fig.classList.add('row')
+    }
+    if(fig.getBoundingClientRect().y <= (dbdshr.getBoundingClientRect().y + 50)){
+      fig.classList.remove('hide-dbds')
+      fig.children[1].children[0].classList.remove('img-trans')
+      fig.children[1].children[0].classList.add('img-trans-def')
+    } else {
+      fig.classList.add('hide-dbds')
+      fig.children[1].children[0].classList.add('img-trans')
+      fig.children[1].children[0].classList.remove('img-trans-def')
 
+    }
+  })
+
+  // handle endpoint container
+  if(endPointCon.getBoundingClientRect().y <= dbdshr.getBoundingClientRect().y){
+    console.log('pos res')
+    endPointCon.classList.remove('hide-dbds')
+  } else {
+    endPointCon.classList.add('hide-dbds')
+  }
+}
 // elongate work-container section on scroll
 const listenScroll = (e) => {
+  let figs = [...dbdsfigs]
+  handleFigures(figs)
   if (e.target.scrollTop >= limit) {
     banner.classList.remove("banner-reg");
     banner.classList.add("banner-sm");
@@ -16,7 +50,6 @@ const listenScroll = (e) => {
     navPos = banner.clientHeight + 5;
     nav.style.top = navPos + "px";
   }
-
 };
 workCon.addEventListener("scroll", listenScroll);
 
