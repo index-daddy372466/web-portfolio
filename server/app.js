@@ -28,8 +28,18 @@ app.use((req, res, next) => {
   next();
 });
 app.use(function(req, res, next) {
+  let keys = Object.keys(req.query);
+  let authorizedQueries = keys.filter(k=>authQueries.includes(k)).length > 0
+
   if(/(put|delete|patch|post)/i.test(req.method)){
     res.status(403).send('<h1>Unauthorized action...</h1><br> <h2>Return <a style="text-decir" href="/">Home</a></h2>');
+  }
+  else {
+    if(keys.length > 0){
+      if(!authorizedQueries){
+      res.status(403).send('<h1>Unauthorized action...</h1><br> <h2>Return <a style="text-decir" href="/">Home</a></h2>');
+    }
+    }
   }
   next();
 })
