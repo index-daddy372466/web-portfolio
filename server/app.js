@@ -57,6 +57,6 @@ app.listen(port, () => {
 });
 
 app.use(function(req, res, next) {
-  res.status(404);
-  res.send('<h1>Nothing to see here...</h1><br> <h2>Return <a style="text-decir" href="/">Home</a></h2>');
+  res.status(404).send('<h1>Nothing to see here...</h1><br> <h2>Return <a style="text-decir" href="/">Home</a></h2>');
+  next();
 });
