@@ -95,26 +95,58 @@ body {
 footer {
   height: 150px;
 }
-section {
-  border: 4px solid red;
-}
+
 footer {
   /* position:absolute; */
   border: 4px solid blue;
   /* bottom:0; */
+}
+.star{
+  z-index:998;
+  top: 5px;
+  right: 5px;
+  position:absolute;
+  display:none;
+  font-size: 30px;
+  pointer-events: none;
+  transition: .5s;
+  text-shadow: 1px 1px rgb(0, 0, 0);
+}
+.st1{
+  color:rgb(234, 234, 128);
+}
+.st2{
+  color:rgb(245, 128, 18);
+}
+.star-reg{
+transform:scale(1.25);
+  opacity:1;
+}
+.star-hide{
+transform:scale(0);
+opacity:0;
 }
 footer,
 section {
   width: 100%;
   padding: 0 0.5rem;
 }
-
+/* banner */
+#space-img{
+position: absolute;
+transform: rotate(180deg);
+opacity: .955;
+}
 #banner {
   display: flex;
+  position:relative;
   flex-direction: column;
   align-items: center;
   transition: 0.75s;
   justify-content: center;
+  overflow:hidden;
+  width:100%;
+  box-shadow: 0 .5rem 12px .6px #0000008b;
 }
 .banner-reg {
   height: 350px;
@@ -123,6 +155,12 @@ section {
 .banner-sm {
   height: 200px;
   transition: 0.25s;
+}
+#banner>h1,#banner>h3{
+  z-index:999;
+  color:ghostwhite;
+  letter-spacing: .75px;
+  margin-top:1rem;
 }
 .yes-scroll {
   overflow-y: scroll;
@@ -296,7 +334,7 @@ section {
   justify-content: space-between;
   z-index: 999;
 }
-.fa-regular {
+.fa-hand-point-up {
   font-size: 30px;
   cursor: pointer;
   z-index: 999;
@@ -330,7 +368,6 @@ section {
   height: 50px;
   width: 50px;
   background: transparent;
-  border: 3px solid #f00;
   border-radius: 50%;
 }
 
@@ -343,7 +380,7 @@ figure > a > img {
   height: 225px;
   width: 225px;
   border-radius: 12px;
-  box-shadow: 0 0.075rem 10px 0.5px #333;
+  box-shadow: 0 0.075rem 10px 0.5px #0000008b;
 }
 figcaption {
   text-align: start;

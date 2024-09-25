@@ -4,7 +4,7 @@ module.exports = window.onload = (e) => {
   const modal = document.querySelector('.modal-wrapper')
   const nav = document.getElementById("nav");
 
-  navPos = banner.clientHeight+5
+  navPos = banner.clientHeight
   nav.style.top = navPos + 'px'
   // banner appears on load
   if(banner.classList.contains('hidden-banner')){
