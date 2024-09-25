@@ -3,12 +3,12 @@ module.exports = window.onload = (e) => {
   const banner = document.getElementById("banner");
   const modal = document.querySelector('.modal-wrapper')
   const nav = document.getElementById("nav");
-  const worksecs = document.querySelectorAll('.work-section')
-  let purple = 'background-color:purple;'
-  let white = 'background-color:white;'
+  const worksecs = document.querySelectorAll('.w-container')
+  let silver = 'background-image:linear-gradient(45deg,transparent,#ffac8e,transparent);'
+  let white = 'background-image:linear-gradient(-45deg,transparent,#ffac8e,transparent);'
 
   worksecs.forEach((w,i)=>{
-    return i%2==0?w.style = purple : w.style = white;
+    return i%2==0?w.style = silver : w.style = white;
   })
 
   navPos = banner.clientHeight
@@ -22,4 +22,4 @@ module.exports = window.onload = (e) => {
   modal.style.top = (window.innerHeight/2)-(modal.clientHeight/2) + 'px';
   
 };
-  
+    
