@@ -9,6 +9,7 @@ const generateRandomAscii = require("./lib/generation.js");
 const ejs = require("ejs");
 const cookieParser = require("cookie-parser");
 const readMedia = require('./lib/fetchMedia.js')
+const authQueries = ['test','test2']
 let pages = [];
 ejs.delimiter = "?"; // Means instead use __webpack_nonce__ = '<?=nonce?>'
 
@@ -26,6 +27,12 @@ app.use((req, res, next) => {
     .digest("base64");
   next();
 });
+app.use(function(req, res, next) {
+  if(/(put|delete|patch|post)/i.test(req.method)){
+    res.status(403).send('<h1>Unauthorized action...</h1><br> <h2>Return <a style="text-decir" href="/">Home</a></h2>');
+  }
+  next();
+})
 
 // routes
 
@@ -35,7 +42,6 @@ app.route("/").get((req, res) => {
     nonce: res.locals.nonce,
   });
 });
-
 app.route("/api/media").get((req,res)=>{
   try{
     let media = [...readMedia()]
@@ -48,4 +54,9 @@ app.route("/api/media").get((req,res)=>{
 
 app.listen(port, () => {
   console.log("connection on " + port);
+});
+
+app.use(function(req, res, next) {
+  res.status(404);
+  res.send('<h1>Nothing to see here...</h1><br> <h2>Return <a style="text-decir" href="/">Home</a></h2>');
 });
