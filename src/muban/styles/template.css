@@ -6,8 +6,8 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.reg-bg {
-  background: #fff;
+.reg-bg {  
+  background: rgba(98, 149, 188, 0.415);
 }
 .modal-bg {
   background: #e6e6e6;

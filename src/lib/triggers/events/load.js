@@ -3,6 +3,13 @@ module.exports = window.onload = (e) => {
   const banner = document.getElementById("banner");
   const modal = document.querySelector('.modal-wrapper')
   const nav = document.getElementById("nav");
+  const worksecs = document.querySelectorAll('.work-section')
+  let purple = 'background-color:purple;'
+  let white = 'background-color:white;'
+
+  worksecs.forEach((w,i)=>{
+    return i%2==0?w.style = purple : w.style = white;
+  })
 
   navPos = banner.clientHeight
   nav.style.top = navPos + 'px'
