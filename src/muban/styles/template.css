@@ -7,7 +7,7 @@
 }
 
 .reg-bg {  
-  background: rgba(10, 33, 51, 0.622);
+  background: rgba(85, 115, 136, 0.745);
 }
 .modal-bg {
   background: #e6e6e6;
@@ -165,7 +165,13 @@ opacity: .955;
   z-index:999;
   color:ghostwhite;
   letter-spacing: .75px;
-  margin-top:1rem;
+}
+#banner>h1{
+  font-size:32px;
+}
+#banner>h3{
+  font-size:18px;
+  margin-top:1.75rem;
 }
 .yes-scroll {
   overflow-y: scroll;
@@ -318,7 +324,9 @@ opacity: .955;
   position: relative;
   transition: .5s;
 }
-
+.rotate-sec{
+  transform:rotate(20deg);
+}
 .fc1 {
   top: 10px;
 }

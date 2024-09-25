@@ -3,45 +3,73 @@ const banner = document.getElementById("banner");
 const nav = document.getElementById("nav");
 const limit = 150;
 const dbdshr = document.querySelector(".dbds-hr");
-const worksec = document.querySelectorAll('.work-section')
+const worksec = document.querySelectorAll(".work-section");
 const midscreen = window.innerHeight / 2;
-let dbdsfigs = document.querySelectorAll('.dbds-figure')
+const endP = document.querySelector(".rotate-sec");
+let dbdsfigs = document.querySelectorAll(".dbds-figure");
 dbdshr.style.top = midscreen + "px";
-const handleSlideEffect = (figs,sections) => {
-   // handle all sections
-   sections.forEach((sec,index)=>{
-    if(sec.getBoundingClientRect().y <= (dbdshr.getBoundingClientRect().y + 10)){
-      sec.classList.remove('hide-dbds')
+const handleSlideEffect = (figs, sections) => {
+  // handle all sections
+  sections.forEach((sec, index) => {
+    if (
+      sec.getBoundingClientRect().y <=
+      dbdshr.getBoundingClientRect().y + 10
+    ) {
+      sec.classList.remove("hide-dbds");
     } else {
-      sec.classList.add('hide-dbds')
+      sec.classList.add("hide-dbds");
     }
-  })
+  });
   // handle figures in dbds
-  figs.forEach((fig,idx)=>{
-    if(idx % 2 == 0){
-      fig.classList.add('row-rev')
-    } else { 
-      fig.classList.add('row')
-    }
-    if(fig.getBoundingClientRect().y <= (dbdshr.getBoundingClientRect().y)){
-      fig.classList.remove('hide-dbds')
-      fig.children[0].children[0].classList.remove('hide-dbds')
-      fig.children[1].children[0].classList.remove('img-trans')
-      fig.children[1].children[0].classList.add('img-trans-def')
+  figs.forEach((fig, idx) => {
+    if (idx % 2 == 0) {
+      fig.classList.add("row-rev");
     } else {
-      fig.classList.add('hide-dbds')
-      fig.children[0].children[0].classList.add('hide-dbds')
-      fig.children[1].children[0].classList.add('img-trans')
-      fig.children[1].children[0].classList.remove('img-trans-def')
+      fig.classList.add("row");
     }
-  })
-
-}
+    if (fig.getBoundingClientRect().y <= dbdshr.getBoundingClientRect().y) {
+      fig.classList.remove("hide-dbds");
+      fig.children[0].children[0].classList.remove("hide-dbds");
+      fig.children[1].children[0].classList.remove("img-trans");
+      fig.children[1].children[0].classList.add("img-trans-def");
+    } else {
+      fig.classList.add("hide-dbds");
+      fig.children[0].children[0].classList.add("hide-dbds");
+      fig.children[1].children[0].classList.add("img-trans");
+      fig.children[1].children[0].classList.remove("img-trans-def");
+    }
+  });
+};
+let startDeg = 15;
+let startPx = -100;
+let trackSc = [];
+const handleRotateScroll = (elem, e) => {
+  trackSc.push(e.target.scrollTop);
+  tracker = [...trackSc].slice(-2);
+  let up = tracker[0] > tracker[1];
+  let down = tracker[1] > tracker[0];
+  if (
+    !endP.classList.contains("hide-dbds") &&
+    endP.getBoundingClientRect().y + endP.clientHeight >= banner.clientHeight
+  ) {
+    if (up && startDeg <= 15) {
+      startDeg += 1.25;
+      startPx += 1;
+      elem.style = `transform:rotate(${startDeg}deg);`;
+    }
+    if (down && startDeg > 0) {
+      startDeg -= 1.25;
+      startPx -= 1;
+      elem.style = `transform:rotate(${startDeg}deg);`;
+    }
+  }
+};
 // elongate work-container section on scroll
 const listenScroll = (e) => {
-  let figs = [...dbdsfigs]
-  let sections = [...worksec]
-  handleSlideEffect(figs,sections)
+  let figs = [...dbdsfigs];
+  let sections = [...worksec];
+  handleSlideEffect(figs, sections);
+  handleRotateScroll(endP, e);
   if (e.target.scrollTop >= limit) {
     banner.classList.remove("banner-reg");
     banner.classList.add("banner-sm");

@@ -4,8 +4,8 @@ module.exports = window.onload = (e) => {
   const modal = document.querySelector('.modal-wrapper')
   const nav = document.getElementById("nav");
   const worksecs = document.querySelectorAll('.w-container')
-  let silver = 'background-image:linear-gradient(45deg,transparent,#ffac8e,transparent);'
-  let white = 'background-image:linear-gradient(-45deg,transparent,#ffac8e,transparent);'
+  let silver = 'background-image:linear-gradient(45deg,transparent,rgba(246, 242, 139, 0.44),transparent);'
+  let white = 'background-image:linear-gradient(-45deg,transparent,rgba(246, 242, 139, 0.44),transparent);'
 
   worksecs.forEach((w,i)=>{
     return i%2==0?w.style = silver : w.style = white;
