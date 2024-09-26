@@ -40,7 +40,7 @@ const handleSlideEffect = (figs, sections) => {
     }
   });
 };
-let startDeg = 15;
+let startDeg = 8;
 let startPx = -100;
 let trackSc = [];
 const handleRotateScroll = (elem, e) => {
@@ -52,13 +52,13 @@ const handleRotateScroll = (elem, e) => {
     !endP.classList.contains("hide-dbds") &&
     endP.getBoundingClientRect().y + endP.clientHeight >= banner.clientHeight
   ) {
-    if (up && startDeg <= 15) {
-      startDeg += 1.25;
+    if (up && startDeg <= 8) {
+      startDeg += 1;
       startPx += 1;
       elem.style = `transform:rotate(${startDeg}deg);`;
     }
     if (down && startDeg > 0) {
-      startDeg -= 1.25;
+      startDeg -= 1;
       startPx -= 1;
       elem.style = `transform:rotate(${startDeg}deg);`;
     }
