@@ -1,19 +1,14 @@
-// web page functionality
-// imports
-import "./lib/triggers/events/load.js"; // window events
+// client events
+import "./lib/events/load.js";
+import "./lib/events/scroll.js";
+import "./lib/events/resize.js";
+
+// elements
 import loadFooter from "./lib/element/footer.js"; // footer
 import loadendpoint from './lib/element/endpoint.js'
-import { activate, activateDef } from "./lib/triggers/events/activate.js";
-import { deactivate, deactivateDef } from "./lib/triggers/events/deactivate.js"; // deactivate all elements except modal
-import loadtoggleNav from "./lib/triggers/events/navigation.js"; // navigation click (mobile)
-import { showModal, hideModal } from "./lib/triggers/events/modals.js"; // test - modal view
-import { disableScroll, enableScroll } from "./lib/triggers/events/scroll.js";
+import loadNav from "./lib/element/navigation.js"; // navigation click (mobile)
 
-// functions
-// showModal(deactivate);
-// setTimeout(() => {
-//   hideModal(activate);
-// }, 4000);
-loadFooter();
-loadtoggleNav(enableScroll, disableScroll, activateDef, deactivateDef);
+//------------------------------------------------
+loadNav();
 loadendpoint();
+loadFooter();

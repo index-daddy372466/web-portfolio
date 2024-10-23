@@ -340,9 +340,9 @@ opacity: .955;
   position: relative;
   transition: .5s;
 }
-.rotate-sec{
+/* .rotate-sec{
   transform:rotate(20deg);
-}
+} */
 .fc1 {
   top: 10px;
 }
@@ -413,6 +413,7 @@ opacity: .955;
   padding:1rem;
   border-radius:12px;
 }
+
 figure > a > img {
   height: 200px;
   width: 200px;

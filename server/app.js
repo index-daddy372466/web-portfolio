@@ -3,28 +3,26 @@ const app = express();
 const port = 9945;
 const path = require("path");
 const crypto = require("crypto");
-const base = crypto.randomBytes(16).toString("base64");
-const ascii = [...new Array(127)].map((_, k) => String.fromCharCode(k + 160));
-const generateRandomAscii = require("./lib/generation.js");
 const ejs = require("ejs");
 const cookieParser = require("cookie-parser");
-const readMedia = require('./lib/fetchMedia.js')
 const authQueries = ['test','test2']
 let pages = [];
 ejs.delimiter = "?"; // Means instead use __webpack_nonce__ = '<?=nonce?>'
 
 app.set("view engine", "ejs");
-
+app.set('views', path.resolve(__dirname,'../client/dist'))
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, "../client/dist")));
 app.use(cookieParser());
 // store nonce
 app.use((req, res, next) => {
+  const bytes = crypto.randomBytes(32)
   res.locals.nonce = crypto
-    .createHash("md5", generateRandomAscii(ascii).join``)
-    .update(generateRandomAscii(ascii).join`` + base)
-    .digest("base64");
+    .createHash("sha256", bytes)
+    .update(bytes)
+    .digest("hex");
+    console.log(res.locals.nonce)
   next();
 });
 app.use(function(req, res, next) {
@@ -48,19 +46,10 @@ app.use(function(req, res, next) {
 
 // nonce
 app.route("/").get((req, res) => {
-  res.render(path.resolve(__dirname, "../client/dist/index.ejs"), {
+  res.render(("index.ejs"), {
     nonce: res.locals.nonce,
   });
 });
-app.route("/api/media").get((req,res)=>{
-  try{
-    let media = [...readMedia()]
-    res.json({media:media})
-  }
-  catch(err){
-    throw new Error(err)
-  }
-})
 
 app.listen(port, () => {
   console.log("connection on " + port);
