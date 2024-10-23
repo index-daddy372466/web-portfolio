@@ -4,4 +4,4 @@ import './media/bannerimg.jpg'
 
 
   __webpack_nonce__ = '<?=nonce?>';
-
+  

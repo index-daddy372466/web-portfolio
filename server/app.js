@@ -18,10 +18,21 @@ app.use(cookieParser());
 // store nonce
 app.use((req, res, next) => {
   const bytes = crypto.randomBytes(32)
+  const salt = crypto.randomBytes(16).toString('hex')
+  console.log('bytes')
+  // console.log(bytes)
+  // console.log(bytes.toString('hex'))
+  const hashed = crypto.scryptSync(bytes,salt,64).toString('hex')
+  const newBytes = `${salt}:${hashed}`
+  console.log(hashed)
+  console.log(newBytes)
+
   res.locals.nonce = crypto
-    .createHash("sha256", bytes)
-    .update(bytes)
+    .createHash("sha256", newBytes)
+    .update(newBytes)
     .digest("hex");
+    console.log("")
+    console.log('local nonce')
     console.log(res.locals.nonce)
   next();
 });
