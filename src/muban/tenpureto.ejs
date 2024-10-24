@@ -9,8 +9,6 @@
     <script nonce="<?=nonce?>" src="https://kit.fontawesome.com/4026a653d4.js" crossorigin="anonymous"></script>
   </head>
   <body class="reg-bg">
-    <?- include('./partials/modals/beiseu.ejs') ?>
-    <!-- modals -->
     <?- include('./partials/common/navboton.ejs') ?>
     <!-- navigation -->
     <nav id="nav" class="navigation nav-elem elem-nav hidden-nav">
@@ -46,41 +44,43 @@
       <h3>Email templates</h3>
       <ul class="email-template-container w-container">
         <figure>
-          <a target="_blank" href="https://github.com/KylesTech95/crm-email-temp/blob/email-verification/media/email-ver.png"><h1 class="et-h1">Secure Account</h1></a>
+          <a target="_blank" href="https://github.com/KylesTech95/crm-email-temp/blob/email-verification/media/email-ver.png" class="et"><h1 class="et-h1">Secure Account</h1></a>
         </figure>
         <hr class="tile-sep">
         <figure>
-          <a target="_blank" href="https://github.com/KylesTech95/crm-email-temp/blob/password-reset/public/media/passwordReset.png"><h1 class="et-h1">Password Reset</h1></a>
+          <a target="_blank" href="https://github.com/KylesTech95/crm-email-temp/blob/password-reset/public/media/passwordReset.png" class="et"><h1 class="et-h1">Password Reset</h1></a>
         </figure>
         <hr class="tile-sep">
         <figure>
-          <a target="_blank" href="https://github.com/KylesTech95/crm-email-temp/blob/birthday/public/media/birthday-card.png"><h1 class="et-h1">Happy Birthday</h1></a>
+          <a target="_blank" href="https://github.com/KylesTech95/crm-email-temp/blob/birthday/public/media/birthday-card.png" class="et"><h1 class="et-h1">Happy Birthday</h1></a>
         </figure>
         <hr class="tile-sep">
         <figure>
-          <a target="_blank" href="https://github.com/KylesTech95/crm-email-temp/blob/kitty/public/media/kittycreative.png"><h1 class="et-h1">Creative/Pop</h1></a>
+          <a target="_blank" href="https://github.com/KylesTech95/crm-email-temp/blob/kitty/public/media/kittycreative.png" class="et"><h1 class="et-h1">Creative/Pop</h1></a>
         </figure>
         <hr class="tile-sep">
         <figure>
-          <a target="_blank" href="https://github.com/KylesTech95/crm-email-temp/blob/newsletter/public/media/newsletter-orig.png"><h1 class="et-h1">Newsletter</h1></a>
+          <a target="_blank" href="https://github.com/KylesTech95/crm-email-temp/blob/newsletter/public/media/newsletter-orig.png" class="et"><h1 class="et-h1">Newsletter</h1></a>
         </figure>
       </ul>
      </div>
+     <!-- office -->
      <div class="work-section">
       <h3>Office modules</h3>
       <ul class="officemods-container w-container">
         <figure>
-          <a target="_blank" href="https://officemods.onrender.com/module/calculator">
+          <a target="_blank" class="rest" href="https://officemods.onrender.com/module/calculator">
             <!-- <h1 class="et-h1">Calculator</h1> -->
              <div id="calculator-container">
               <div class="calculator-display"></div>
               <div class="calculator-buttons"></div>
              </div>
           </a>
+          <figcaption class="f-caption">calculator</figcaption>
         </figure>
         <hr class="tile-sep">
         <figure>
-            <a target="_blank" href="https://officemods.onrender.com/module/notepad">
+            <a target="_blank" class="rest" href="https://officemods.onrender.com/module/notepad">
               <div id="notepad-container">
                 <div class="notepad-textarea">
                   <hr class="notepad-hr">
@@ -94,10 +94,11 @@
                 </div>
                </div>
             </a>
-        </figure>
+            <figcaption class="f-caption">notepad</figcaption>
+          </figure>
         <hr class="tile-sep">
         <figure>
-          <a target="_blank" href="https://chat-with-animals.onrender.com/login">
+          <a target="_blank" class="rest" href="https://chat-with-animals.onrender.com/login">
             <div id="chatroom-container">
               <div class="pright">
                 <i class="fa-solid fa-person"></i>
@@ -116,10 +117,12 @@
               </div>
             </div>
           </a>
+          <figcaption class="f-caption">chatrooms</figcaption>
         </figure>
         <hr class="tile-sep">
         <figure>
-          <a target="_blank" href="https://officemods.onrender.com"><h1 class="et-h1">View More</h1></a>
+          <a target="_blank" class="rest" href="https://officemods.onrender.com"><h1 class="et-h1">View More</h1></a>
+          <figcaption class="f-caption">view more</figcaption>
         </figure>
       </ul>
      </div>
@@ -128,7 +131,7 @@
       <h3>Games</h3>
       <ul class="games-container w-container">
         <figure>
-          <a target="_blank" href="https://kylestech95.github.io/snake-game/">
+          <a target="_blank" class="rest" href="https://kylestech95.github.io/snake-game/">
             <!-- <h1 class="et-h1">Classic Snake</h1> -->
              <div id="snake-container">
               <div class="snake-bod"></div>
@@ -136,10 +139,11 @@
               <div class="snake-bod"></div>
              </div>
           </a>
+          <figcaption class="f-caption">snake</figcaption>
         </figure>
         <hr class="tile-sep">
         <figure>
-          <a target="_blank" href="https://kylestech95.github.io/react-simon-says/">
+          <a target="_blank" class="rest" href="https://kylestech95.github.io/react-simon-says/">
             <div id="simon-container">
               <div class="simon-bod"></div>
               <div class="simon-bod"></div>
@@ -147,14 +151,15 @@
               <div class="simon-bod"></div>
              </div>
           </a>
+          <figcaption class="f-caption">simon says</figcaption>
         </figure>
         <hr class="tile-sep">
         <figure>
-          <a target="_blank" href="https://index-daddy372466.github.io/gamemodules/"><h1 class="et-h1">View More</h1></a>
+          <a target="_blank" class="rest" href="https://index-daddy372466.github.io/gamemodules/"><h1 class="et-h1">View More</h1></a>
+          <figcaption class="f-caption">view more</figcaption>
         </figure>
       </ul>
      </div>
-     
     </section>
 
     <!-- footer -->

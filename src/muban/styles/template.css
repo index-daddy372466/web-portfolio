@@ -15,12 +15,18 @@ figure>a{
   align-items: center;
   justify-content: center;
   box-shadow: 0 0.075rem 10px 0.5px #0000008b;
-  border-radius: 12px;
   font-size:18px;
   color:#fff;
   text-shadow: 1px 1px black;
   background:#333;
   cursor:pointer;
+}
+figure>a.et{
+border-radius: 12px;
+}
+figure>a.rest{
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
 }
 #snake-container{
   width:50%;
@@ -50,14 +56,12 @@ figure>a{
   display:grid;
   width:50%;
   height:50%;
-  border:3px solid rgb(243, 238, 92);
   grid-template-columns: 1fr 1fr;
   gap:.25rem;
   justify-content: center;
   align-items: center;
 }
 #simon-container>div.simon-bod{
-  border:3px solid cyan;
   height:50px;
   width:50px;
 }
@@ -378,9 +382,15 @@ figure > a > img {
   border-radius: 12px;
   box-shadow: 0 0.075rem 10px 0.5px #0000008b;
 }
-figcaption {
+figcaption.f-caption {
   text-align: start;
   width: 100%;
+  font-size: 22px;
+  color:#fff;
+  background:#000;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding-left:1rem;
 }
 .figcaption-module {
   text-align: end;

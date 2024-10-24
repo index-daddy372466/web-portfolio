@@ -44,11 +44,6 @@ module.exports = {
       inject: false,
     }),
     new HtmlPlug({
-      filename: "partials/modals/beiseu.ejs",
-      template: "src/muban/modaru.ejs",
-      inject: false,
-    }),
-    new HtmlPlug({
       filename: "partials/common/navboton.ejs",
       template: "src/muban/navboton.ejs",
       inject: false,
