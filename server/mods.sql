@@ -34,7 +34,7 @@ CREATE FUNCTION public.delete_old_note() RETURNS trigger
     LANGUAGE plpgsql
     AS $$
 begin
-delete from notepad where timestamp < current_timestamp - interval '15 seconds';
+delete from notepad where timestamp < current_timestamp - interval '30 minutes';
 return null;
 end;
 $$;
@@ -50,7 +50,7 @@ CREATE FUNCTION public.delete_old_row() RETURNS trigger
     LANGUAGE plpgsql
     AS $$
 begin
-delete from users where timestamp < current_timestamp - interval '15 seconds';
+delete from users where timestamp < current_timestamp - interval '30 minutes';
 return null;
 end;
 $$;
@@ -201,8 +201,7 @@ COPY public.calculator (id, result, equation) FROM stdin;
 --
 
 COPY public.notepad (id, notes, user_id, "timestamp") FROM stdin;
-1	{"note":"6f7e38","iv":"eb8bb67443b28010908af5a1813e02b7"}	affba802b503a06bce7ca35a3c0cf6489f02e4af	2024-10-24 13:37:04.990763
-2	{"note":"eeffc7","iv":"9ac256c7bec3f3af39c853a1d7e921ed"}	affba802b503a06bce7ca35a3c0cf6489f02e4af	2024-10-24 13:37:08.588357
+5	{"note":"1de9fc5253bf","iv":"fd7e03cab88fb031ff715d427558369d"}	affba802b503a06bce7ca35a3c0cf6489f02e4af	2024-10-24 14:00:23.682494
 \.
 
 
@@ -226,7 +225,7 @@ SELECT pg_catalog.setval('public.calculator_history_id_seq', 1, false);
 -- Name: notepad_id_seq; Type: SEQUENCE SET; Schema: public; Owner: officemods_user
 --
 
-SELECT pg_catalog.setval('public.notepad_id_seq', 2, true);
+SELECT pg_catalog.setval('public.notepad_id_seq', 5, true);
 
 
 --
