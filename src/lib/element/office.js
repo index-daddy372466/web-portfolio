@@ -1,4 +1,4 @@
-module.exports = office = async () => {
+module.exports = loadoffice = async () => {
     // fetch media endpoint
     return null
   };
