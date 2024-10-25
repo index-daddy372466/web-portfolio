@@ -16,6 +16,7 @@ figure>a{
   justify-content: center;
   box-shadow: 0 0.075rem 10px 0.5px #0000008b;
   font-size:18px;
+  padding:0 .25rem;
   color:#fff;
   text-shadow: 1px 1px black;
   background:#333;
@@ -151,10 +152,59 @@ border:2px solid green;
 .modal-bg {
   background: #e6e6e6;
 }
-.nosql{
+.nosql,.sql{
   font-size:80px;
-  color:yellow;
-  stroke:red;
+}
+.nosql{
+  color:rgb(232, 126, 12);
+}
+.nosql-a{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:.5rem;
+}
+.dbcell{
+  width:75px;
+  background:rgb(215, 168, 13);
+  height:25px;
+  border:none;
+}
+.nosql-a>span.dbcell:nth-child(1){
+  border-radius: 8px;
+  transform:skewX(20deg);
+  animation:slideRight 1s forwards infinite alternate;
+}
+.nosql-a>span.dbcell:nth-child(2){
+  border-radius: 8px;
+  transform:skewX(-20deg);
+  animation:slideLeft 1s forwards infinite alternate;
+}
+.nosql-a>span.dbcell:nth-child(3){
+  border-radius: 8px;
+  transform:skewX(20deg);
+  animation:slideRight 1s forwards infinite alternate;
+}
+@keyframes slideRight {
+  from{
+    transform:skewX(20deg) translate(0,0);
+  }
+  to{
+    transform:skewX(20deg) translate(10px,0);
+  }
+}
+@keyframes slideLeft {
+  from{
+    transform:skewX(20deg) translate(0,0);
+  }
+  to{
+    transform:skewX(20deg) translate(-10px,0);
+  }
+}
+
+.sql{
+  color:rgb(188, 31, 202);
 }
 .blur-element {
   transition: 0.25s;
@@ -368,6 +418,7 @@ opacity: .955;
   letter-spacing: 1.15px;
   padding:.5rem;
   text-shadow: .5px .5px 6px #000;
+  margin-top:1rem;
 }
 .w-container{
   height: 100%;
@@ -377,7 +428,6 @@ opacity: .955;
   width: 100%;
   overflow-x: scroll;
   gap: 0.5rem;
-  padding: 1.5rem 1rem;
   border-radius:12px;
 }
 
