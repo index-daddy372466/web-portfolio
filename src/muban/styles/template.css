@@ -171,17 +171,20 @@ border:2px solid green;
   height:25px;
   border:none;
 }
-.nosql-a>span.dbcell:nth-child(1){
+h3.sql-title{
+  margin-bottom:1.5rem;
+}
+span.dbcell.db1{
   border-radius: 8px;
   transform:skewX(20deg);
   animation:slideRight 1s forwards infinite alternate;
 }
-.nosql-a>span.dbcell:nth-child(2){
+span.dbcell.db2{
   border-radius: 8px;
   transform:skewX(-20deg);
   animation:slideLeft 1s forwards infinite alternate;
 }
-.nosql-a>span.dbcell:nth-child(3){
+span.dbcell.db3{
   border-radius: 8px;
   transform:skewX(20deg);
   animation:slideRight 1s forwards infinite alternate;
@@ -419,6 +422,10 @@ opacity: .955;
   padding:.5rem;
   text-shadow: .5px .5px 6px #000;
   margin-top:1rem;
+}
+.sql-title{
+  color:#fff;
+  font-size: 20px;
 }
 .w-container{
   height: 100%;
