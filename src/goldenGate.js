@@ -1,18 +1,9 @@
-// client events
-import "./lib/events/load.js";
-import "./lib/events/scroll.js";
-import "./lib/events/resize.js";
+// injections
+import './muban/styles/template.css'
+import './muban/styles/mediaquery.css'
+import './media/bannerimg.jpg'
+import './media/bannerimg2.jpg'
 
-// elements
-import loadFooter from "./lib/element/footer.js"; // footer
-import loadendpoint from './lib/element/endpoint.js'
-import loadOffice from './lib/element/office.js'
-import loadGames from './lib/element/games.js'
-import loadNav from "./lib/element/navigation.js"; // navigation click (mobile)
 
-//------------------------------------------------
-loadNav();
-loadOffice();
-loadGames();
-loadendpoint();
-loadFooter();
+  __webpack_nonce__ = '<?=nonce?>';
+  

@@ -6,6 +6,16 @@
   list-style: none;
   font-family: Arial, Helvetica, sans-serif;
 }
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 figure>a{
   text-align: center;
   height: 200px;
@@ -442,6 +452,8 @@ opacity: .955;
 .work-section{
     margin-bottom:1.5rem;
     transition:.5s;
+    border-bottom:.5rem solid #000;
+    padding-bottom:.5rem;
     /* background:#fa9b78c2; */
 }
 .work-section>h3{
@@ -513,4 +525,3 @@ figcaption.f-caption {
   border: 0.75px solid rgb(92, 92, 92) (255, 255, 255);
   border-radius: 12px;
 }
-

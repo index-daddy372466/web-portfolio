@@ -11,5 +11,13 @@ module.exports = window.onload = (e) => {
     if(banner.classList.contains('hidden-banner')){
       banner.classList.remove('hidden-banner')
     }
+
+    // switch banner b/w desktop & mobile
+    configBannerImg(document.querySelectorAll('.space-img'))
   };
+
+  function configBannerImg(imgs){
+    const mobileWidth = 950, banner1 = `./media/bannerimg.jpg`, banner2 = `./media/bannerimg2.jpg`
+    return imgs.forEach(img=>document.body.clientWidth >= mobileWidth ? img.src = banner2 : img.src = banner1)
+  }
       

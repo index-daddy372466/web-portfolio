@@ -57,6 +57,15 @@ module.exports = {
       },
       filename: "[name].css",
     }),
+    new CssPlug({
+      insert: function (linkTag) {
+        var reference = document.querySelector("#css-target");
+        if (reference) {
+          reference.parentNode.insertBefore(linkTag, reference);
+        }
+      },
+      filename: "[name].css",
+    }),
   ],
   // devserver not needed
   
