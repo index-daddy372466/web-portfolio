@@ -389,6 +389,42 @@ opacity: .955;
 .no-pointer {
   pointer-events: none;
 }
+.fa-key{
+  font-size: 50px;
+  color:red;
+  transform: rotate(60deg);
+  animation:keycol 15s forwards infinite alternate;
+  transition: .25s;
+}
+.full-w{
+  width:100%;
+}
+.encryption-container{
+  width:100%;
+}
+.ews{
+  width:100%;
+}
+.e-fig-w{
+  width:100%;
+}
+@keyframes keycol {
+  0%{
+    color:red;
+  }
+  25%{
+    color:rgb(58, 132, 207);
+  }
+  50%{
+    color:rgb(67, 150, 113);
+  }
+  75%{
+    color:rgb(58, 132, 207);;
+  }
+  100%{
+    color:red;
+  }
+}
 
 #nav-button {
   position: absolute;
@@ -453,6 +489,7 @@ figcaption.f-caption {
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   padding-left:1rem;
+  letter-spacing: 1.25px;
 }
 .figcaption-module {
   text-align: end;
