@@ -3,6 +3,7 @@ const navbtn = document.getElementById("nav-button");
 const stars = document.querySelectorAll('.star')
 const allelements = document.querySelectorAll('*')
 const workcon = document.getElementById('work')
+const navitems = document.querySelectorAll('.nav-list-item')
 console.log(workcon)
 
 module.exports = loadNav = () => {
@@ -53,3 +54,16 @@ function restoreBackground(elem){
   elem.classList.remove('blur-element-sm')
   elem.classList.remove('no-pointer')
  }
+
+ function extendNavOpt(arr){
+  arr.forEach(li=>{
+    // onclicks
+    li.onclick = e => {
+      const article = e.currentTarget.children[0]
+      // extend article's capabilities to the parent (nav link)
+      console.log(article)
+      window.open(article.href,'_blank')
+    }
+  })
+ }
+ extendNavOpt(navitems)
