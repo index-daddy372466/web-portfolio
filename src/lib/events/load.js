@@ -14,10 +14,25 @@ module.exports = window.onload = (e) => {
 
     // switch banner b/w desktop & mobile
     configBannerImg(document.querySelectorAll('.space-img'))
+    clickFigCaption(document.querySelectorAll('.f-caption'))
   };
 
+  // switch between 2 banners dependent on screen width
   function configBannerImg(imgs){
     const mobileWidth = 950, banner1 = `./media/bannerimg.jpg`, banner2 = `./media/bannerimg2.jpg`
     return imgs.forEach(img=>document.body.clientWidth >= mobileWidth ? img.src = banner2 : img.src = banner1)
   }
       
+  function clickFigCaption(arr){
+    let target;
+    arr.forEach(f=>{
+      f.onclick = e => {
+        if(e.currentTarget == f){
+          target = e.currentTarget;
+          const article = target.parentElement.children[0]
+          // console.log(article.href)
+          window.open(article.href,'_blank')
+        }
+      }
+    })
+  }

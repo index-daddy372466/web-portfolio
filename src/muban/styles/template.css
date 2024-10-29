@@ -531,6 +531,7 @@ figcaption.f-caption {
   border-bottom-right-radius: 12px;
   padding-left:1rem;
   letter-spacing: 1.25px;
+  cursor:pointer;
 }
 .figcaption-module {
   text-align: end;
