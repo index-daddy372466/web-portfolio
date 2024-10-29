@@ -4,7 +4,6 @@ const path = require("path");
 const HtmlPlug = require("html-webpack-plugin");
 const CssPlug = require("mini-css-extract-plugin");
 
-
 module.exports = {
   // mode
   mode: (!process.env.TYPE || process.env.TYPE!='production') ? 'development' : process.env._TYPE_,
