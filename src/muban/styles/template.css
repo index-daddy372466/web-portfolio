@@ -39,6 +39,7 @@ figure>a{
   display:flex;
   flex-direction:column;
   align-items: center;
+  position:relative;
   justify-content: center;
   box-shadow: 0 0.075rem 10px 0.5px #0000008b;
   font-size:18px;
@@ -50,6 +51,7 @@ figure>a{
 }
 figure>a.et{
 border-radius: 12px;
+position:relative;
 }
 figure>a.rest{
   border-top-right-radius: 12px;
@@ -368,6 +370,25 @@ footer {
   transition: .5s;
   text-shadow: 1px 1px rgb(0, 0, 0);
 }
+.fa-js{
+  color:gold;
+}
+.fa-brands,.dbicon{
+  position:absolute;
+  top:5px;
+}
+.fa-html5{
+  color:orange;
+}
+.dbicon{
+  color:#fff;
+}
+.fa-css3-alt{
+  color:#00f;
+}
+.fa-react{
+  color:cyan;
+}
 .st1{
   color:rgb(234, 234, 128);
 }
@@ -519,6 +540,7 @@ opacity: .955;
 .sql-title{
   color:#fff;
   font-size: 20px;
+  margin-top:.5rem;
 }
 .w-container{
   height: 100%;
