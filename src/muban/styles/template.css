@@ -375,7 +375,12 @@ footer {
 }
 .fa-brands,.dbicon{
   position:absolute;
+}
+.icon-top{
   top:5px;
+}
+.icon-bottom{
+  bottom:5px;
 }
 .fa-html5{
   color:orange;
