@@ -4,7 +4,7 @@ const stars = document.querySelectorAll('.star')
 const allelements = document.querySelectorAll('*')
 const workcon = document.getElementById('work')
 const navitems = document.querySelectorAll('.nav-list-item')
-console.log(workcon)
+// console.log(workcon)
 
 module.exports = loadNav = () => {
  // window click event
@@ -61,7 +61,7 @@ function restoreBackground(elem){
     li.onclick = e => {
       const article = e.currentTarget.children[0]
       // extend article's capabilities to the parent (nav link)
-      console.log(article)
+      // console.log(article)
       window.open(article.href,'_blank')
     }
   })

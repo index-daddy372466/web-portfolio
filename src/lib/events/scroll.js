@@ -9,9 +9,9 @@ const footer = document.getElementById("contact");
 
 // elongate work-container section on scroll
 const listenScroll = (e) => {
-  console.log('cl height')
-  console.log(e.target.clientHeight)
-  console.log(e.target.scrollTop)
+  // console.log('cl height')
+  // console.log(e.target.clientHeight)
+  // console.log(e.target.scrollTop)
   if (e.target.scrollTop >= limit) {
     banner.classList.remove("banner-reg");
     banner.classList.add("banner-sm");
@@ -31,7 +31,7 @@ const listenScroll = (e) => {
 
 
   if((e.target.scrollTop) >= e.target.clientHeight){
-    console.log('you hit the target bro on scroll')
+    // console.log('you hit the target bro on scroll')
     footer.classList.remove('footer-down') 
     footer.classList.add('footer-up') 
   }
