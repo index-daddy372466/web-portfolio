@@ -6,7 +6,7 @@ const CssPlug = require("mini-css-extract-plugin");
 
 module.exports = {
   // mode
-  mode: (!process.env.TYPE || process.env.TYPE!='production') ? 'development' : process.env.TYPE,
+  mode: 'production',
   // entry
   entry: [
     path.resolve(__dirname, "src/londonTower.js"),
