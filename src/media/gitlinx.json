@@ -1,0 +1,49 @@
+{
+    "linx": [
+        {
+            "id": 1,
+            "caption": "calculator",
+            "link": "https://github.com/index-daddy372466/interactive-calculator"
+        },
+        {
+            "id": 2,
+            "caption": "notepad",
+            "link": "https://github.com/KylesTech95/notes-server/tree/passport"
+        },
+        {
+            "id": 3,
+            "caption": "chatrooms",
+            "link": "https://github.com/index-daddy372466/socket-basics/tree/user-info"
+        },
+        {
+            "id": 4,
+            "caption": "snake",
+            "link": "https://github.com/kylestech95/snake-game"
+        },
+        {
+            "id": 5,
+            "caption": "simon",
+            "link": "https://github.com/index-daddy372466/simon-says-reactjs"
+        },
+        {
+            "id": 6,
+            "caption": "mancala",
+            "link": "https://github.com/KylesTech95/mancala-game"
+        },
+        {
+            "id": 7,
+            "caption": "database playground",
+            "link": "https://github.com/KylesTech95/database-playground-fork"
+        },
+        {
+            "id": 8,
+            "caption": "raining dildos",
+            "link": "https://github.com/index-daddy372466/raining-sex-toys/tree/develop"
+        },
+        {
+            "id": 9,
+            "caption": "public key infrastructure",
+            "link": "https://github.com/index-daddy372466/key-encryption-playground/tree/main"
+        }
+    ]
+}

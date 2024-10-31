@@ -30,7 +30,15 @@ module.exports = {
         }
       },
       {
-        test: /\.js$/,
+        test: /^\.json$/,
+        exclude:/node_modules/,
+        loader: 'json-loader',
+        options:{
+          name:"/media/[name].[ext]"
+        }
+      },
+      {
+        test: /^\.js$/,
         exclude: /node_modules/,
       },
     ],

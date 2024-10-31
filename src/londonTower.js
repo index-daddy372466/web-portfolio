@@ -2,6 +2,7 @@
 import "./lib/events/load.js";
 import "./lib/events/scroll.js";
 import "./lib/events/resize.js";
+import nosaj from './media/gitlinx.json'
 
 // elements
 import loadFooter from "./lib/element/footer.js"; // footer
@@ -16,7 +17,7 @@ import { underdev } from "./lib/data/underdev.js";
 // console.log(underDev)
 //------------------------------------------------
 loadNav();
-loadTags(underdev);
+loadTags(underdev,nosaj);
 loadOffice();
 loadGames();
 loadendpoint();

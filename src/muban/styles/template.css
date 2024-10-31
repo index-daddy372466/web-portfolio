@@ -386,6 +386,12 @@ footer {
 .icon-bottom{
   bottom:5px;
 }
+.readme-top{
+  top:0px;
+}
+.readme-bottom{
+  bottom:0px;
+}
 .fa-html5{
   color:orange;
 }
@@ -525,8 +531,8 @@ opacity: .955;
 
 .readme-tag{
   right:0px !important;
-  top:0px;
   font-size:50px;
+  z-index:999;
 }
 /* work section */
 .work-section{
