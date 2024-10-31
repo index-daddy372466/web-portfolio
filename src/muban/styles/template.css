@@ -34,6 +34,7 @@ figure{
 }
 figure>a{
   text-align: center;
+  overflow: hidden;
   height: 200px;
   width: 200px;
   display:flex;
@@ -387,10 +388,11 @@ footer {
   bottom:5px;
 }
 .readme-top{
-  top:0px;
+  top:-6px;
 }
 .readme-bottom{
-  bottom:0px;
+  bottom:-6px;
+
 }
 .fa-html5{
   color:orange;
@@ -533,6 +535,8 @@ opacity: .955;
   right:0px !important;
   font-size:50px;
   z-index:999;
+  /* border:2px solid white; */
+  height:53px;
 }
 /* work section */
 .work-section{
@@ -560,7 +564,7 @@ opacity: .955;
 .sql-title{
   color:#fff;
   font-size: 20px;
-  margin-top:.5rem;
+  transform:translate(0,1.25rem);
 }
 .w-container{
   height: 100%;
