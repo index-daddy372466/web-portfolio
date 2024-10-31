@@ -24,14 +24,14 @@ module.exports = loadTags = ([...captions]) => {
    figures.forEach((fig,newton)=>{
    const article = fig.children[0];
    let icons = [...article.children].filter(x=>/fa-/i.test(x.classList))
+   const git = [...article.children].filter(x=>/readme-tag/i.test(x.classList))
+   console.log(git)
    let h3 = [...fig.children].findIndex(x=>/tag-h3/i.test(x.classList))
-   icons.reduce((a,b)=>{
-      if(h3==-1){
-         b.classList.add('icon-top')
-      } else {
-         b.classList.add('icon-bottom')
-      }
-   },0)
-   })
+   icons.reduce((a,b)=> h3 == -1 ? b.classList.add('icon-top') : b.classList.add('icon-bottom'),0)
+})
+
+
+
+   
    
 }
