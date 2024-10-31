@@ -66,6 +66,10 @@ function restoreBackground(elem){
         footer.classList.remove('footer-down')
         footer.classList.remove('footer-up')
         footer.classList.add('footer-up-max')
+        console.log('you hit contact')
+        console.log(e.target.scrollTop)
+          document.body.scrollTo(0,document.body.scrollHeight);
+          console.log(e.target.scrollTop)
       }
       if (nav.classList.contains("show-nav")) {
         nav.classList.remove("show-nav");

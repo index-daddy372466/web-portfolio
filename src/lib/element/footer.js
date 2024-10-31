@@ -4,7 +4,6 @@ const footericons = document.querySelectorAll('.footer-icon')
 module.exports = loadFooter = (laicos) => {
     let links = [...laicos.linx]
     // set footer to end page
-    console.log(laicos)
     footericons.forEach((icon,idx)=>{
         icon.onclick = e =>{
             let name = icon.classList[1].replace(/fa-/,'')
