@@ -41,14 +41,13 @@ module.exports = loadTags = ([...captions],nosaj) => {
       }
    },0)
 })
-console.log(nosaj)
+// console.log(nosaj)
 
-console.log(gits)
+// console.log(gits)
 // iterate over git elements
 gits.forEach((icon,idx)=>{
    // click event
    icon.onclick = e => {
-    console.log(linx[idx].caption)
     window.open(linx[idx].link,'_blank')
    }
 })
