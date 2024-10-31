@@ -9,7 +9,6 @@ const footer = document.getElementById("contact");
 
 // elongate work-container section on scroll
 const listenScroll = (e) => {
-  footer.classList.remove('footer-up-max') 
   // console.log('cl height')
   // console.log(e.target.clientHeight)
   // console.log(e.target.scrollTop)
@@ -18,6 +17,7 @@ const listenScroll = (e) => {
     banner.classList.add("banner-sm");
     navPos = banner.clientHeight;
     nav.style.top = navPos + "px";
+    footer.classList.remove('footer-up-max') 
     footer.classList.remove('footer-up') 
     footer.classList.add('footer-down') 
 
@@ -27,6 +27,7 @@ const listenScroll = (e) => {
     banner.classList.remove("banner-sm");
     navPos = banner.clientHeight;
     nav.style.top = navPos + "px";
+    footer.classList.remove('footer-up-max') 
     footer.classList.remove('footer-down') 
     footer.classList.add('footer-up') 
   }

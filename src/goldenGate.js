@@ -5,6 +5,7 @@ import './media/bannerimg.jpg'
 import './media/bannerimg2.jpg'
 import './media/profilepicture.jpg'
 import './media/gitlinx.json'
+import './media/social.json'
 
 
   __webpack_nonce__ = '<?=nonce?>';

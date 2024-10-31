@@ -1,0 +1,24 @@
+{
+    "linx": [
+        {
+            "id": 1,
+            "caption": "youtube",
+            "link": "https://www.youtube.com/@Kyle-wc6so/videos?view=0&sort=dd&shelf_id=2"
+        },
+        {
+            "id": 2,
+            "caption": "instagram",
+            "link": "https://www.instagram.com/index_daddy0/"
+        },
+        {
+            "id": 3,
+            "caption": "linkedin",
+            "link": "https://www.linkedin.com/in/kyle-stewart-461905311"
+        },
+        {
+            "id": 4,
+            "caption": "envelope",
+            "link": "mailto:testmailbox987654@gmail.com"
+        }
+    ]
+}

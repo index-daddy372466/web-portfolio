@@ -3,6 +3,7 @@ import "./lib/events/load.js";
 import "./lib/events/scroll.js";
 import "./lib/events/resize.js";
 import nosaj from './media/gitlinx.json'
+import laicos from './media/social.json'
 
 // elements
 import loadFooter from "./lib/element/footer.js"; // footer
@@ -21,4 +22,4 @@ loadTags(underdev,nosaj);
 loadOffice();
 loadGames();
 loadendpoint();
-loadFooter();
+loadFooter(laicos);

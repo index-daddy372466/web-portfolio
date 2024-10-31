@@ -62,8 +62,9 @@ function restoreBackground(elem){
       const article = e.currentTarget.children[0]
       // extend article's capabilities to the parent (nav link)
       window.open(article.href,'_self')
-      if(idx > 1 && footer.classList.contains('footer-down')){
+      if(idx > 1){
         footer.classList.remove('footer-down')
+        footer.classList.remove('footer-up')
         footer.classList.add('footer-up-max')
       }
       if (nav.classList.contains("show-nav")) {
