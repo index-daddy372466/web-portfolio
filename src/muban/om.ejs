@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Security-Policy"
+    content="script-src-elem 'nonce-<?= nonce ?>';default-src data: 'self' https://*.bootstrap.com https://*.jsdelivr.net https://*.fontawesome.com https://fonts.googleapis.com https://fonts.gstatic.com https://code.jquery.com; form-action 'self'; style-src 'self' 'unsafe-inline'; upgrade-insecure-requests" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="css-target">About Kyle Anthony</title>
+    <link rel="stylesheet" nonce="<?=nonce?>" href="./main.css" />
+    <script nonce="<?=nonce?>" src="https://kit.fontawesome.com/4026a653d4.js" crossorigin="anonymous"></script>
+  </head>
+  <body class="reg-bg">
+    <?- include('./partials/common/navboton.ejs') ?>
+    <!-- navigation -->
+    <nav id="nav" class="navigation nav-elem elem-nav hidden-nav">
+      <ul class="nav-list-container">
+        <div class="general-nav flex-nav-item">
+          <li class="nav-list-item"><a href="/">Home</a></li>
+          <li class="nav-list-item"><a href="#">about</a></li>
+          <li class="nav-list-item"><a href="#">work</a></li>
+          <li class="nav-list-item"><a href="#">contact</a></li>
+        </div>
+      </ul>
+    </nav>
+    <!-- banner/about -->
+    <section id="banner" class="hidden-banner welcome-banner banner-welcome banner-reg">
+      <img src="./media/bannerimg.jpg" alt="space-image" width="100%" class="space-img">
+      <h1>Develop with Kyle</h1>
+      <h3>A Web Developer</h3>
+    </section>
+
+
+    <!-- content -->
+    <section id="work">
+      <div class="work-section">
+        <h3>About Kyle</h3>
+        <div class="w-container" id="pic-container">
+          <img src="./media/profilepicture.jpg" alt="picture of kyle" draggable="false">
+        </div>
+      <div class="w-container">
+        <div id="about-container">
+          <p class="about-para">
+            <span style="font-size:22px;border:none;color:gold;background-image: linear-gradient(transparent 5%,#333 80%,transparent 5%);padding:4.75px 0;">Self-educated Software Developer</span> with the drive to boost web performance & creativity in your industry.
+            <br>
+            <br>
+            <span style="font-size:22px;border:none;color:gold;background-image: linear-gradient(transparent 5%,#333 80%,transparent 5%);padding:4.75px 0;">As a United States Marine & college graduate <em>[B.S. Criminal Justice]</em></span>,
+             I believe <b>commitment</b> & <b>discipline</b> are important values in order to accomplish the mission.
+             <br>
+             <br>
+            <span style="font-size:22px;border:none;color:gold;background-image: linear-gradient(transparent 5%,#333 80%,transparent 5%);padding:4.75px 0;">As a day-dreamer</span>, I enjoy visualizing current & new project-ideas that can be tangible & deployed on the world-wide-web.
+            <br>
+            <br>
+            <span style="font-size:22px;border:none;color:gold;background-image: linear-gradient(transparent 5%,#333 80%,transparent 5%);padding:4.75px 0;">As a communicator</span>, I work best with the "2-way-street" communication-style where we can express thought & active listening.
+            <br>
+            <br>
+          </p>
+        </div>
+      </div>
+      <a href="/" style="text-decoration: none;color:blue;font-size:14px;">Back to Home</a>
+      </div>
+    </section>
+    
+
+
+    <!-- footer -->
+    <footer id="contact" class="footer-up">
+      <img src="./media/bannerimg.jpg" alt="space-image" width="100%" class="space-img">
+      <div class="footer-icons">
+        <i class="fa-brands fa-youtube footer-icon"></i>
+        <i class="fa-brands fa-instagram footer-icon"></i>
+        <i class="fa-brands fa-linkedin footer-icon"></i>
+        <i class="fa-regular fa-envelope"></i>
+      </div>
+    </footer>
+    <script nonce="<?=nonce?>" defer src="./main.bundle.js"></script>
+  </body>
+</html>

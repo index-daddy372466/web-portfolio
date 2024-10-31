@@ -32,6 +32,17 @@ figure{
   position:relative;
   border-radius: 12px;
 }
+#about-container{
+  /* border:2px solid red; */
+  overflow:hidden;
+  height:100%;
+
+}
+#about-container>p.about-para{
+  font-size:20px;
+  text-align: start;
+  padding:0 0 0 .25rem;
+}
 figure>a{
   text-align: center;
   overflow: hidden;
@@ -349,16 +360,22 @@ body {
 .fa-instagram{
 color:#fff;
 }
+
 .fa-youtube{
 color:#fff;
 }
 .fa-linkedin{
   color:#fff;
 }
-.fa-linkedin,.fa-instagram,.fa-youtube{
+.fa-envelope{
+  color:#fff;
+}
+.fa-linkedin,.fa-instagram,.fa-youtube,.fa-envelope{
   font-size: 28px;
   position: relative !important;
   margin-right:.5rem;
+  cursor:pointer;
+  z-index: 998;
 }
 .footer-icons{
   position: absolute;
@@ -485,6 +502,20 @@ opacity: .955;
   color:ghostwhite;
   letter-spacing: .75px;
 }
+#pic-container{
+  /* width:100%;
+  height:100%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+#pic-container>img{
+  height:200px;
+  width:200px;
+  border-radius: 50%;
+  margin-bottom:.5rem;
+}
 #banner>h1{
   font-size:32px;
 }
@@ -605,6 +636,7 @@ opacity: .955;
   overflow-x: scroll;
   gap: 0.5rem;
   border-radius:12px;
+  /* border:3px solid red; */
 }
 
 figure > a > img {

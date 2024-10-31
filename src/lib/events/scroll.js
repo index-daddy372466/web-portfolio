@@ -4,7 +4,7 @@ const nav = document.getElementById("nav");
 const limit = 150;
 const dbdshr = document.querySelector(".dbds-hr");
 const midscreen = window.innerHeight / 2;
-dbdshr.style.top = midscreen + "px";
+if(dbdshr)dbdshr.style.top = midscreen + "px";
 const footer = document.getElementById("contact");
 
 // elongate work-container section on scroll
@@ -39,4 +39,4 @@ const listenScroll = (e) => {
   }
 };
 
-workCon.addEventListener("scroll", listenScroll);
+if(workCon)workCon.addEventListener("scroll", listenScroll);

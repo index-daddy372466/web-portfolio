@@ -5,8 +5,7 @@ const path = require("path");
 const crypto = require("crypto");
 const ejs = require("ejs");
 const cookieParser = require("cookie-parser");
-const authQueries = ['test','test2']
-let pages = [];
+const authQueries = []
 ejs.delimiter = "?"; // Means instead use __webpack_nonce__ = '<?=nonce?>'
 
 app.set("view engine", "ejs");
@@ -41,12 +40,13 @@ app.use(function(req, res, next) {
   let authorizedQueries = keys.filter(k=>authQueries.includes(k)).length > 0
 
   if(/(put|delete|patch|post)/i.test(req.method)){
-    res.status(403).send('<h1>Unauthorized action...</h1><br> <h2>Return <a style="text-decir" href="/">Home</a></h2>');
+    res.status(403).send('<h1 style="text-align:center;width:100%;">Unauthorized action...</h1><br> <h2 style="text-align:center;width:100%;">Return <a href="/">Home</a></h2>');
   }
   else {
+    // if get request
     if(keys.length > 0){
       if(!authorizedQueries){
-      res.status(403).send('<h1>Unauthorized action...</h1><br> <h2>Return <a style="text-decir" href="/">Home</a></h2>');
+      res.status(403).send('<h1 style="text-align:center;width:100%;">Unauthorized action...</h1><br> <h2 style="text-align:center;width:100%;">Return <a href="/">Home</a></h2>');
     }
     }
   }
@@ -57,16 +57,23 @@ app.use(function(req, res, next) {
 
 // nonce
 app.route("/").get((req, res) => {
+  res.locals.ver = {verification:'valid page'}
   res.render(("index.ejs"), {
     nonce: res.locals.nonce,
   });
 });
+
+app.route('/about-me').get((req,res)=>{
+    res.render(("aboutme.ejs"), {
+      nonce: res.locals.nonce,
+    })
+})
 
 app.listen(port, () => {
   console.log("connection on " + port);
 });
 
 app.use(function(req, res, next) {
-  res.status(404).send('<h1>Nothing to see here...</h1><br> <h2>Return <a style="text-decir" href="/">Home</a></h2>');
+  res.status(404).send('<h1 style="text-align:center;width:100%;">Nothing to see here...</h1><br> <h2 style="text-align:center;width:100%;">Return <a href="/">Home</a></h2>');
   next();
 });

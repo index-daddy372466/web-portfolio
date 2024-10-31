@@ -51,6 +51,11 @@ module.exports = {
       inject: false,
     }),
     new HtmlPlug({
+      filename: "aboutme.ejs",
+      template: "src/muban/om.ejs",
+      inject: false,
+    }),
+    new HtmlPlug({
       filename: "partials/common/navboton.ejs",
       template: "src/muban/navboton.ejs",
       inject: false,
