@@ -277,6 +277,7 @@ body {
   height: 100vh;
   width: 100%;
   transition: 0.25s;
+  scroll-behavior: smooth;
 }
 
 #nav {
@@ -345,6 +346,31 @@ body {
 /* .general-nav {
   border: 4px solid #0f0;
 } */
+.fa-instagram{
+color:#fff;
+}
+.fa-youtube{
+color:#fff;
+}
+.fa-linkedin{
+  color:#fff;
+}
+.fa-linkedin,.fa-instagram,.fa-youtube{
+  font-size: 28px;
+  position: relative !important;
+  margin-right:.5rem;
+}
+.footer-icons{
+  position: absolute;
+  right:15px;
+  bottom:2.5px;
+  width:200px;
+  height:50px;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  gap:1.2rem;
+}
 
 footer {
   display: flex;
@@ -359,6 +385,10 @@ footer {
 }
 .footer-up{
   height: 75px;
+}
+.footer-up-max{
+  height: 150px;
+  transform: .75s;
 }
 .footer-down{
   height: 0;
