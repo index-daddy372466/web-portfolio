@@ -2,6 +2,7 @@ module.exports = window.onload = (e) => {
     // banner
     const banner = document.getElementById("banner");
     const nav = document.getElementById("nav");
+    const notice = document.querySelector('.spinup-notice')
     // let silver = 'background-image:linear-gradient(45deg,transparent,rgba(246, 242, 139, 0.44),transparent);'
     // let white = 'background-image:linear-gradient(-45deg,transparent,rgba(246, 242, 139, 0.44),transparent);'
   
@@ -10,6 +11,9 @@ module.exports = window.onload = (e) => {
     // banner appears on load
     if(banner.classList.contains('hidden-banner')){
       banner.classList.remove('hidden-banner')
+      setTimeout(()=>{
+        notice.classList.add('hidden-banner')
+      },6000)
     }
 
     // switch banner b/w desktop & mobile

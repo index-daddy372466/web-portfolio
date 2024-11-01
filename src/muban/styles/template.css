@@ -353,6 +353,25 @@ body {
   justify-content: space-evenly;
   gap: 0.25rem;
 }
+.spinup-notice{
+  color:#f00;
+  position: absolute;
+  bottom:5px;
+  z-index:999;
+  transition: .5s;
+  left:25px;
+}
+.move-notice{
+  animation:movenotice 8s forwards ease-out;
+}
+@keyframes movenotice {
+  from{
+    transform:translate(0,0)
+  }
+  to{
+    transform:translate(50px,0);
+  }
+}
 .fa-instagram{
 color:#fff;
 }
