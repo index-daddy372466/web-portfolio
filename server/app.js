@@ -25,7 +25,8 @@ app.use((req, res, next) => {
 app.use(cookieSession({
   name:'sesh',
   keys:[process.env.SEC,process.env.CES],
-  maxAge:24 * 60 * 60 * 1000,
+  maxAge:(1800000), // 30 minutes
+  // maxAge:10000, // 10 seconds
   httpOnly:false,
   signed:false,
 }))
@@ -60,8 +61,9 @@ app.use(function(req, res, next) {
 app.route("/").get((req, res) => {
   let reqvisits = false;
   res.locals.ver = {verification:'valid page'}
-  req.session['visit']+=1
+  isNaN(req.session['visit']) ? req.session['visit'] = 0 : req.session['visit']+=1
   console.log(req.session)
+  // let currAge = req.maxAge - new Date.now()
   if(req.session['visit'] > 1){
     reqvisits = true
   }
