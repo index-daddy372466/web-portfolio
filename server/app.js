@@ -37,6 +37,7 @@ app.use((req, res, next) => {
   if(req.session){
     req.session['id'] = userid;
   }
+  if(req.session.isNew)counter=0;
   next();
 });
 app.use(function(req, res, next) {
@@ -61,7 +62,7 @@ app.use(function(req, res, next) {
 app.route("/").get((req, res) => {
   let reqvisits = false;
   res.locals.ver = {verification:'valid page'}
-  isNaN(req.session['visit']) ? req.session['visit'] = 0 : req.session['visit']+=1
+  isNaN(req.session['visit']) ? req.session['visit'] = 0 : req.session['visit'] += 1
   console.log(req.session)
   // let currAge = req.maxAge - new Date.now()
   if(req.session['visit'] > 1){
