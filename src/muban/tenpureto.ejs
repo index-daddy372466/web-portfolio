@@ -25,9 +25,12 @@
       <img src="./media/bannerimg.jpg" alt="space-image" width="100%" class="space-img">
       <h1>Develop with Kyle</h1>
       <h3>A Web Developer</h3>
-      <h4 class="spinup-notice move-notice">Please allow some services 45 - 60<br>seconds to spin-up</h4>
-    </section>
-    
+      <h4 class=<? if (visit) { ?>
+                      "bye-bye spinup-notice move-notice"
+                      <? } else { ?>
+                        "spinup-notice move-notice"
+                        <? } ?>>Please allow some services 45 - 60<br>seconds to spin-up</h4>
+    </section>   
     <!-- projects -->
     <section id="work" class="projects yes-scroll">
       <!-- email temps -->
@@ -242,7 +245,7 @@
           </a>
           <figcaption class="f-caption">NoSql</figcaption>
         </figure>
-        <hr class="tile-sep">
+        <!-- <hr class="tile-sep">
         <figure>
           <a target="_blank" class="rest" href="https://raining-sex-toys-j88b.onrender.com/home">
             <i class="fa-brands fa-square-github readme-tag"></i>
@@ -254,7 +257,7 @@
             <i class="fa-solid fa-database sql"></i>
           </a>
           <figcaption class="f-caption">SQL</figcaption>
-        </figure>
+        </figure> -->
         <hr class="tile-sep">
         <figure>
           <a target="_blank" class="rest" href="https://github.com/index-daddy372466/psql-rbac-family">

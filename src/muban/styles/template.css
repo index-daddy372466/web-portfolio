@@ -440,6 +440,9 @@ footer {
 .fa-js{
   color:gold;
 }
+.bye-bye{
+  display:none;
+}
 .fa-brands,.dbicon{
   position:absolute;
 }

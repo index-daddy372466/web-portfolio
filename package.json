@@ -15,6 +15,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "cookie-parser": "^1.4.6",
+    "cookie-session": "^2.1.0",
     "css-loader": "^7.1.2",
     "cssnano": "^7.0.6",
     "dotenv": "^16.4.5",
@@ -29,7 +30,7 @@
     "nodemon": "^3.1.4",
     "postcss": "^8.4.47",
     "postcss-loader": "^8.1.1",
-    "rucksack-css": "^0.1.2",
+    "rucksack-css": "^1.0.2",
     "svg-inline-loader": "^0.8.2",
     "webpack": "^5.94.0",
     "webpack-cli": "^5.1.4"

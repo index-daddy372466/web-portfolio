@@ -6,7 +6,7 @@ const CssPlug = require("mini-css-extract-plugin");
 
 module.exports = {
   // mode
-  mode: 'production',
+  mode: process.env.EPYT||'development',
   // entry
   entry: [
     path.resolve(__dirname, "src/londonTower.js"),
